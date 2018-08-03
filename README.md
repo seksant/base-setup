@@ -1,1 +1,5 @@
 # test-script
+
+TEST
+ทดสอบ
+
