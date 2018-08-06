@@ -33,11 +33,15 @@ mkdir -p /etc/php7/etc
 
 rm -rf php-src
 
-git clone https://github.com/php/php-src.git --depth=1
+git clone https://github.com/php/php-src.git
+cd php-src
+git checkout 72104d2b6ecbbabd18de15f10739be5ce3dc9ce0
 
-cd php-src/ext
-
+cd ext
 git clone https://github.com/krakjoe/pthreads -b master pthreads
+cd pthreads
+git checkout 99a86fab88ede56a7ae0bd3e70249425caf5ad05
+cd ..
 
 wget https://pecl.php.net/get/ev -O ev.tar
 
